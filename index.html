@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MysteriousForest - OfficialWebsite</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleInfo(dateID){
+            var infoSection = document.getElementById(dateID);
+            if (infoSection.style.display === 'none' || infoSection.style.display === '') {
+                infoSection.style.display = 'block';
+            } else {
+                infoSection.style.display = 'none';
+            }
+        }
+
+        window.onload = function() {
+                showSection('Glowna');
+                changeLanguage('en');
+        };
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+                section.style.display = 'none'; 
+            });
+            var activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+            activeSection.style.display = 'block';
+        }
+
+        function changeLanguage(language) {
+            var elementsPl = document.querySelectorAll('.pl');
+            var elementsEn = document.querySelectorAll('.en');
+
+            if (language === 'pl') {
+                elementsPl.forEach(function(el) {
+                    el.style.display = 'block';
+                });
+                elementsEn.forEach(function(el) {
+                    el.style.display = 'none';
+                });
+            } else if (language === 'en') {
+                elementsPl.forEach(function(el) {
+                    el.style.display = 'none';
+                });
+                elementsEn.forEach(function(el) {
+                    el.style.display = 'block';
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="flags">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg" alt="Polski" onclick="changeLanguage('pl')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English" onclick="changeLanguage('en')">
+        </div>
+        <h1 class="pl">Mysterious Forest | Oficjalna Strona</h1>
+        <h1 class="en" style="display:none;">Mysterious Forest | Official Website</h1>
+        <p class="pl">Witamy na oficjalnej stronie Mysterious Forest!</p>
+        <p class="en" style="display:none;">Welcome to the official Mysterious Forest website!</p>
+    </header>
+    <nav>
+        <a class="pl" onclick="showSection('Glowna')">Główna</a>
+        <a class="pl" onclick="showSection('Wymagania')">Wymagania</a>
+        <a class="pl" onclick="showSection('Update')">Aktualizacje</a>
+        <a class="pl" onclick="showSection('Aktualnosci')">Aktualności</a>
+        <a class="pl" onclick="showSection('Galeria')">Galeria</a>
+        <a class="pl" onclick="showSection('SocialMedia')">Social Media</a>
+
+        <a class="en" onclick="showSection('Glowna')">Home</a>
+        <a class="en" onclick="showSection('Wymagania')">Requirements</a>
+        <a class="en" onclick="showSection('Update')">Update</a>
+        <a class="en" onclick="showSection('Aktualnosci')">News</a>
+        <a class="en" onclick="showSection('Galeria')">Gallery</a>
+        <a class="en" onclick="showSection('SocialMedia')">Social Media</a>
+    </nav>
+    <div class="content">
+        <section id="Glowna" class="section">
+            <h2 class="pl">Silnik</h2>
+            <h2 class="en" style="display:none;">Engine</h2>
+            <p class="pl">Gra jest tworzona na silniku Unity wersji 2022.3.43f1</p>
+            <p class="en" style="display:none;">The game is created on the engine Unity version 2022.3.43f1</p>
+            <h2 class="pl">Grafika</h2>
+            <h2 class="en" style="display:none;">Graphics</h2>
+            <p class="pl">Staramy się o jak najlepszą jakość naszych modeli i próbujemy osiągnąć jakość grafiki HDRP</p>
+            <p class="en" style="display:none;">We strive for the best quality of our models and try to achieve HDRP graphics quality</p>
+            <p class="pl">Gra będzie w 3D</p>
+            <p class="en" style="display:none;">The game will be in 3D</p>
+            <p class="pl">Staramy się również o jak najlepsze animacje do naszych modeli</p>
+            <p class="en" style="display:none;">We also strive to provide the best possible animations for our models.</p>
+            <h2 class="pl">Autorzy</h2>
+            <h2 class="en" style="display:none;">Authors</h2>
+            <p class="pl">Autorami gry są:</p>
+            <p class="en" style="display:none;">The authors of the game are:</p>
+            <p>Pokebol</p>
+            <p>Vemi</p>
+        </section>
+
+        <section id="Wymagania" class="section">
+            <h2 class="pl">Minimalne wymagania systemowe</h2>
+            <h2 class="en" style="display:none;">Minimum System Requirements</h2>
+            <p class="pl">System operacyjny: Windows 11/10 (64-bitowy)</p>
+            <p class="en" style="display:none;">Operating System: Windows 11/10(64-bit)</p>
+            <p class="pl">Procesor: Intel Core i5-3470 lub AMD FX-8320</p>
+            <p class="en" style="display:none;">Processor: Intel Core i5-3470 or AMD FX-8320</p>
+            <p class="pl">Karta graficzna: Nvidia GeForce GT 1030</p>
+            <p class="en" style="display:none;">Graphics card: Nvidia GeForce GT 1030</p>
+            <p class="pl">RAM: 4GB</p>
+            <p class="pl">Karta dźwiękowa: opcjonalna</p>
+            <p class="en" style="display:none;">Sound card: optional</p>
+
+            <h2 class="pl">Zalecane wymagania systemowe</h2>
+            <h2 class="en" style="display:none;">Recommended System Requirements</h2>
+            <p class="pl">System operacyjny: Windows 11/10 (64-bitowy)</p>
+            <p class="en" style="display:none;">Operating System: Windows 11/10(64-bit)</p>
+            <p class="pl">Procesor: Intel Core i7-3770 lub AMD Ryzen 5 1600</p>
+            <p class="en" style="display:none;">Processor: Intel Core i7-3770 or AMD Ryzen 5 1600</p>
+            <p class="pl">Karta graficzna: Nvidia GeForce GTX 970</p>
+            <p class="en" style="display:none;">Graphics card: Nvidia GeForce GTX 970</p>
+            <p class="pl">RAM: 6GB</p>
+            <p class="pl">Karta dźwiękowa: opcjonalna</p>
+            <p class="en" style="display:none;">Sound card: optional</p>
+            <h2 class="pl">UWAGA NIE SĄ TO PROFESJONALNE POMIARY A JEDYNIE EMULACJE NA RÓŻNYCH URZĄDZENIACH. WYMAGANIA MOGĄ ULEC ZMIANIE</h2>
+            <h2 class="en" style="display:none;">NOTE: THESE ARE NOT PROFESSIONAL MEASUREMENTS BUT ONLY EMULATIONS ON DIFFERENT DEVICES. REQUIREMENTS MAY CHANGE</h2>
+        </section>
+
+        <section id="Aktualnosci" class="section">
+            <h2 class="pl">
+                <span class="date-button" onclick="toggleInfo('info26092024')">Informacje z 26.09.2024</span>
+            </h2>
+            <h2 class="en" style="display:none;">
+                <span class="date-button" onclick="toggleInfo('info26092024')">From the dish 26.09.2024</span>
+            </h2>
+            <div id="info26092024" class="info-content" style="display:none;"> 
+                <h2 class="pl">Data premiery</h2>
+                <h2 class="en" style="display:none;">Release date</h2>
+                <p class="pl">xx.xx.2025 (premiera może ulec zmianie)</p>
+                <p class="en" style="display:none;">xx.xx.2025 (the premiere may change)</p>
+
+                <h2 class="pl">Cena</h2>
+                <h2 class="en" style="display:none;">Price</h2>
+                <p class="pl">Gra będzie za darmo</p>
+                <p class="en" style="display:none;">The game will be free</p>
+
+                <h2 class="pl">Platformy</h2>
+                <h2 class="en" style="display:none;">Platforms</h2>
+                <p class="pl">Gra będzie dostępna na Windows 11/10</p>
+                <p class="en" style="display:none;">The game will be available on Windows 11/10</p>
+
+                <h2 class="pl">Gdzie będzie można pobrać?</h2>
+                <h2 class="en" style="display:none;">Where will it be available for download?</h2>
+                <p class="pl">Grę będzie można pobrać na oficjalnej stronie itch.io.</p>
+                <p class="en" style="display:none;">The game will be available for download on the official itch.io website.</p>
+            </div>
+        </section>
+
+        <section id="Update" class="section">
+            <h2 class="pl">Gra nie posiada żadnych aktualizacji</h2>
+            <h2 class="en" style="display:none;">The game has no updates</h2>
+        </section>
+
+        <section id="Galeria" class="section">
+            <h2 class="pl">Brak zdjęć</h2>
+            <h2 class="en" style="display:none;">No photos</h2>
+        </section>
+
+        <section id="SocialMedia" class="section"> 
+            <h2>Discord</h2>
+            <p class="pl">Link do discorda: <a href="https://discord.gg/bk3VeDug">Oficjalny Discord</a></p>
+            <p class="en" style="display:none;">Link to Discord: <a href="https://discord.gg/bk3VeDug">Official Discord</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p class="pl">© 2024 Pokebol&Vemi. Wszelkie prawa zastrzeżone.</p>
+        <p class="en" style="display:none;">© 2024 Pokebol&Vemi. All rights reserved.</p>
+    </footer>
+</body>
+</html>

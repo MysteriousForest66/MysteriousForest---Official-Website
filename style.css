@@ -21,7 +21,7 @@ nav {
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: 	#8B0000;
+    color: #8B0000;
     font-weight: bold;
     display: inline-block;
     padding: 5px 10px; 
@@ -57,4 +57,57 @@ footer {
     height: auto;
     cursor: pointer; 
     margin-right: 5px; 
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav {
+        flex-direction: column; 
+        margin: 10px 0;
+    }
+
+    nav a {
+        margin: 5px 0;
+        font-size: 20px; 
+        padding: 10px 0; 
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    footer {
+        font-size: 14px; 
+    }
+
+    .flags img {
+        width: 30px; 
+    }
+
+    body {
+        font-size: 16px; 
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    nav a {
+        font-size: 18px; 
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px; 
+    }
+
+    .flags img {
+        width: 25px; 
+    }
 }
